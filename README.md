@@ -1,7 +1,6 @@
 # Benchmarkus <img src="https://img.shields.io/badge/.NET-9-blueviolet" alt=".NET 9 Badge" /> <img src="https://img.shields.io/badge/BenchmarkDotNet-%E2%9A%A1%20-lightgrey" alt="BenchmarkDotNet Badge" /> <img src="https://img.shields.io/badge/Status-Experimental-yellow" alt="Status: Experimental" />
 
-[![Build](https://img.shields.io/github/actions/workflow/status/barisozgenn/Benchmarkus/build.yml?style=for-the-badge&color=brightgreen)](https://github.com/barisozgenn/Benchmarkus/actions)  
-[![License](https://img.shields.io/github/license/barisozgenn/Benchmarkus.svg?style=for-the-badge&color=blue)](https://github.com/barisozgenn/Benchmarkus/blob/main/LICENSE)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/barisozgenn/Benchmarkus/pulls)
+[![Build](https://img.shields.io/github/actions/workflow/status/barisozgenn/Benchmarkus/build.yml?style=for-the-badge&color=brightgreen)](https://github.com/barisozgenn/Benchmarkus/actions)  [![License](https://img.shields.io/github/license/barisozgenn/Benchmarkus.svg?style=for-the-badge&color=blue)](https://github.com/barisozgenn/Benchmarkus/blob/main/LICENSE)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/barisozgenn/Benchmarkus/pulls)
 
 ---
 
