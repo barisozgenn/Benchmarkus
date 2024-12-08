@@ -31,3 +31,46 @@ Modern .NET applications often require dynamic behavior—ranging from generatin
   
 - **Contributions & Evolution:**  
   Invite community contributions to expand the range of benchmarks, integrate new techniques, or refine existing tests as the .NET ecosystem evolves.
+
+### Benchmark Results
+
+### Benchmark Results Across .NET Versions
+
+Below are the benchmark results for different .NET versions, using `IterationCount=20` and `WarmupCount=5`.
+
+#### .NET SDK 9.0.101
+
+| **Method**             | **Mean**          | **Error**        | **StdDev**       | **Median**         | **Gen0**  | **Gen1**  | **Gen2** | **Allocated** |
+|------------------------|------------------:|-----------------:|-----------------:|-------------------:|----------:|----------:|---------:|--------------:|
+| ReuseInstance          |         0.0017 ns |       0.0035 ns  |       0.0038 ns  |         0.0000 ns  |         - |         - |        - |             - |
+| DelegateInvoke         |         0.7120 ns |       0.0026 ns  |       0.0027 ns  |         0.7117 ns  |         - |         - |        - |             - |
+| ReflectionInvoke       |        40.1431 ns |       0.0479 ns  |       0.0532 ns  |        40.1496 ns  |    0.0134 |         - |        - |         112 B |
+| CreateInstance_OneTime | 3,518,898.0504 ns | 207,521.1439 ns  | 238,981.6580 ns  | 3,444,262.5352 ns  |   85.9375 |   39.0625 |   7.8125 |     701938 B |
+
+#### .NET SDK 8.0.11 (8.0.1124.51707)
+
+| **Method**             | **Mean**          | **Error**        | **StdDev**       | **Median**         | **Gen0**  | **Gen1**  | **Gen2** | **Allocated** |
+|------------------------|------------------:|-----------------:|-----------------:|-------------------:|----------:|----------:|---------:|--------------:|
+| ReuseInstance          |         0.0102 ns |       0.0091 ns  |       0.0102 ns  |         0.0053 ns  |         - |         - |        - |             - |
+| DelegateInvoke         |         0.8892 ns |       0.0011 ns  |       0.0012 ns  |         0.8890 ns  |         - |         - |        - |             - |
+| ReflectionInvoke       |        38.1528 ns |       0.0817 ns  |       0.0874 ns  |        38.1596 ns  |    0.0134 |         - |        - |         112 B |
+| CreateInstance_OneTime | 2,905,768.9865 ns |  89,027.1801 ns  |  95,258.0854 ns  | 2,870,478.8359 ns  |   85.9375 |   39.0625 |   7.8125 |     691479 B |
+
+#### .NET SDK 6.0.36 (6.0.3624.51421)
+
+| **Method**             | **Mean**          | **Error**        | **StdDev**       | **Gen0**   | **Gen1**  | **Gen2**  | **Allocated** |
+|------------------------|------------------:|-----------------:|-----------------:|-----------:|----------:|----------:|--------------:|
+| ReuseInstance          |         0.0142 ns |       0.0090 ns  |       0.0093 ns  |          - |         - |         - |             - |
+| DelegateInvoke         |         0.8867 ns |       0.0042 ns  |       0.0043 ns  |          - |         - |         - |             - |
+| ReflectionInvoke       |       149.2151 ns |       0.6704 ns  |       0.7720 ns  |     0.0534 |         - |         - |         112 B |
+| CreateInstance_OneTime | 2,997,309.6031 ns |  34,478.0498 ns  |  39,704.9735 ns  |   222.6563 |   66.4063 |   19.5313 |     674992 B |
+
+---
+
+### Key Observations
+
+1. **`ReuseInstance`:** Across all versions, reusing an already-created instance incurs negligible overhead.
+2. **`DelegateInvoke`:** Consistently faster than reflection, though slightly slower in older versions of .NET.
+3. **`ReflectionInvoke`:** Shows stable performance across versions, but it's significantly slower than delegate invocation.
+4. **`CreateInstance_OneTime`:** By far the most expensive method in terms of time and memory, especially in .NET 6, which shows significantly higher allocations compared to newer versions.
+
