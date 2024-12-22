@@ -49,9 +49,38 @@ Below are sample benchmark tables for different .NET versions, using `IterationC
 
 #### .NET SDK 8.0.404
 
-| **Method**   | **Mean**  | **Error**  | **StdDev** | **Median** | **Gen0** | **Gen1** | **Gen2** | **Allocated** |
-|--------------|----------:|-----------:|-----------:|-----------:|---------:|---------:|---------:|-------------:|
-| *(example)*  |  15.01 ms |  0.10 ms   |  0.18 ms   |  14.95 ms  |    1     |    0     |    0     |      5 KB    |
+| **Method**                     | **ArraySize** | **Mean**             | **Error**         | **StdDev**        | **Gen0**    | **Allocated** |
+|--------------------------- |---------- |-----------------:|--------------:|--------------:|--------:|----------:|
+| Int_QuickSort              | 100       |       1,095.5 ns |       4.44 ns |       3.94 ns |  0.0572 |     488 B |
+| Int_MergeSort              | 100       |       2,359.0 ns |       3.78 ns |       3.16 ns |  1.0147 |    8488 B |
+| Int_TimSort                | 100       |         453.6 ns |       0.59 ns |       0.53 ns |  0.0501 |     424 B |
+| Int_HeapSort               | 100       |       1,904.5 ns |       1.57 ns |       1.39 ns |  0.0572 |     488 B |
+| Int_BubbleSort             | 100       |       5,940.0 ns |       9.79 ns |       9.16 ns |  0.0534 |     488 B |
+| String_QuickSort           | 100       |       3,636.1 ns |       9.21 ns |       8.16 ns |  0.1030 |     888 B |
+| String_MergeSort           | 100       |       5,783.8 ns |      28.96 ns |      27.09 ns |  1.3123 |   11016 B |
+| String_TimSort             | 100       |       2,541.6 ns |       7.71 ns |       7.21 ns |  0.1030 |     888 B |
+| String_HeapSort            | 100       |       6,636.1 ns |      24.88 ns |      23.28 ns |  0.0992 |     888 B |
+| String_BubbleSort          | 100       |      29,602.0 ns |     585.32 ns |     601.08 ns |  0.0610 |     888 B |
+| Complex_QuickSortByAmount  | 100       |       5,041.9 ns |      31.55 ns |      29.51 ns |  0.0916 |     824 B |
+| Complex_MergeSortByAmount  | 100       |       6,182.3 ns |      72.29 ns |      60.37 ns |  1.3046 |   10952 B |
+| Complex_TimSortByAmount    | 100       |       3,000.9 ns |      28.50 ns |      26.66 ns |  0.0954 |     824 B |
+| Complex_HeapSortByAmount   | 100       |      10,034.1 ns |      16.40 ns |      14.53 ns |  0.0916 |     824 B |
+| Complex_BubbleSortByAmount | 100       |      30,452.8 ns |     152.36 ns |     135.06 ns |  0.0610 |     824 B |
+| Int_QuickSort              | 5000      |     219,197.7 ns |   3,392.43 ns |   3,173.28 ns |  2.1973 |   20088 B |
+| Int_MergeSort              | 5000      |     311,752.0 ns |     585.23 ns |     518.79 ns | 63.9648 |  536072 B |
+| Int_TimSort                | 5000      |     143,169.6 ns |   2,763.26 ns |   2,449.56 ns |  2.1973 |   20024 B |
+| Int_HeapSort               | 5000      |     469,256.8 ns |   2,307.15 ns |   2,045.23 ns |  1.9531 |   20088 B |
+| Int_BubbleSort             | 5000      |  15,798,195.1 ns |  16,026.54 ns |  13,382.88 ns |       - |   20111 B |
+| String_QuickSort           | 5000      |     703,314.7 ns |   1,531.56 ns |   1,357.69 ns |  3.9063 |   40089 B |
+| String_MergeSort           | 5000      |     798,633.0 ns |   1,104.42 ns |     979.04 ns | 91.7969 |  774505 B |
+| String_TimSort             | 5000      |     576,541.5 ns |     980.50 ns |     917.16 ns |  3.9063 |   40089 B |
+| String_HeapSort            | 5000      |   1,062,552.6 ns |   1,255.53 ns |     980.23 ns |  3.9063 |   40089 B |
+| String_BubbleSort          | 5000      | 111,326,182.4 ns | 368,982.87 ns | 345,146.81 ns |       - |   40333 B |
+| Complex_QuickSortByAmount  | 5000      |     721,528.3 ns |   3,418.07 ns |   3,030.03 ns |  3.9063 |   40025 B |
+| Complex_MergeSortByAmount  | 5000      |     780,259.7 ns |     478.08 ns |     373.25 ns | 91.7969 |  774441 B |
+| Complex_TimSortByAmount    | 5000      |     568,560.2 ns |   1,600.86 ns |   1,336.79 ns |  3.9063 |   40025 B |
+| Complex_HeapSortByAmount   | 5000      |   1,287,119.2 ns |   1,768.46 ns |   1,567.69 ns |  3.9063 |   40025 B |
+| Complex_BubbleSortByAmount | 5000      | 113,910,361.1 ns | 236,749.85 ns | 209,872.57 ns |       - |   40147 B |
 
 #### .NET SDK 7.0.410
 
