@@ -40,6 +40,10 @@ This project is part of the **Benchmarkus** repository, showcasing various **arr
 ### Benchmark Results Across .NET Versions
 
 Below are sample benchmark tables for different .NET versions, using `IterationCount=20` and `WarmupCount=5`. Actual results may vary based on hardware and OS.
+#### .NET SDK 10.0.0
+
+| **Method**                     | **ArraySize** | **Mean**             | **Error**           | **StdDev**          | **Gen0**    | **Allocated** |
+|--------------------------- |---------- |-----------------:|----------------:|----------------:|--------:|----------:|
 
 #### .NET SDK 9.0.101
 
