@@ -15,4 +15,7 @@ Console.WriteLine("Benchmarks completed.");
   }
 }
 */
-//dotnet build -c Release
+//Running steps:
+//dotnet restore
+//dotnet build
+//dotnet run -c Release
