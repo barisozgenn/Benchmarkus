@@ -107,8 +107,8 @@ namespace ModelMapping
                 list.Add(new Person
                 {
                     Id = i,
-                    FirstName = "FirstName" + i,
-                    LastName = "LastName" + i,
+                    FirstName = "Baris" + i,
+                    LastName = "Ozgen" + i,
                     BirthDate = DateTime.Now.AddDays(-rand.Next(10_000)),
                     Email = $"user{i}@example.com",
                     Addresses = addresses
