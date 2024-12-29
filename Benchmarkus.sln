@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelMapping", "ModelMappin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructureOperations", "DataStructureOperations\DataStructureOperations.csproj", "{F2251C79-EEA2-4734-BBAD-3D712D2BADAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionOperations", "CollectionOperations\CollectionOperations.csproj", "{98B40323-7CE4-4D8B-A8BB-CC0294B20248}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F2251C79-EEA2-4734-BBAD-3D712D2BADAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2251C79-EEA2-4734-BBAD-3D712D2BADAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2251C79-EEA2-4734-BBAD-3D712D2BADAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B40323-7CE4-4D8B-A8BB-CC0294B20248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B40323-7CE4-4D8B-A8BB-CC0294B20248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B40323-7CE4-4D8B-A8BB-CC0294B20248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B40323-7CE4-4D8B-A8BB-CC0294B20248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
