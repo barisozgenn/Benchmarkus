@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using BenchmarkDotNet.Attributes;
+using Common.Models;
 
 namespace ListOperations.Benchmarks
 {

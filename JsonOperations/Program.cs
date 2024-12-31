@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BenchmarkDotNet.Running;
-using ListOperations.Benchmarks;
+using JsonOperations.Benchmarks;
 
 Console.WriteLine("Hello, World!");
-var summary = BenchmarkRunner.Run<ListBenchmark>();
+var summary = BenchmarkRunner.Run<JsonBenchmark>();
