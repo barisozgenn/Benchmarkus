@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
 using AutoMapper;
-using BenchmarkDotNet.Configs;
+using Common.Models;
 
 namespace ModelMapping
 {
