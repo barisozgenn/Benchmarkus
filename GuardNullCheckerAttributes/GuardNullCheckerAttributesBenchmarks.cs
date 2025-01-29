@@ -27,10 +27,10 @@ public class GuardNullCheckerAttributesBenchmarks
         _personNotNull = new Person
         {
             Id = 1,
-            FirstName = "John",
-            LastName = "Doe",
+            FirstName = "Baris",
+            LastName = "test",
             BirthDate = DateTime.Now.AddYears(-30),
-            Email = "john.doe@example.com",
+            Email = "Baris.doe@example.com",
             Addresses = new List<Address>
                 {
                     new Address { Id = 101, PersonId = "1", Country = "USA", City = "NYC" }
