@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonOperations", "JsonOpera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnmanagedTypesOperations", "UnmanagedTypesOperations\UnmanagedTypesOperations.csproj", "{1BDDAA06-6633-4B58-A228-27C319BBF8A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardNullCheckerAttributes", "GuardNullCheckerAttributes\GuardNullCheckerAttributes.csproj", "{31B1D828-F628-4C1A-B7CF-D9AC42F21D58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{1BDDAA06-6633-4B58-A228-27C319BBF8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BDDAA06-6633-4B58-A228-27C319BBF8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BDDAA06-6633-4B58-A228-27C319BBF8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B1D828-F628-4C1A-B7CF-D9AC42F21D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B1D828-F628-4C1A-B7CF-D9AC42F21D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B1D828-F628-4C1A-B7CF-D9AC42F21D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B1D828-F628-4C1A-B7CF-D9AC42F21D58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
