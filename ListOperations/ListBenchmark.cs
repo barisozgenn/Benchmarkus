@@ -12,14 +12,14 @@ namespace ListOperations.Benchmarks
     [MemoryDiagnoser] // Tracks memory allocation for each benchmark
     [Orderer(SummaryOrderPolicy.FastestToSlowest)] // Sorts results from fastest to slowest
     [RankColumn] // Adds a 'Rank' column in the results table
-    [SimpleJob(warmupCount:3, iterationCount:10)] // Configures the job
+    [SimpleJob(warmupCount:1, iterationCount:5)] // Configures the job
     public class ListBenchmark
     {
         /// <summary>
         /// The number of elements used in these benchmarks.
         /// Adjust to balance accuracy vs. execution time.
         /// </summary>
-        [Params(100)]
+        [Params(50)]
         public int Size { get; set; }
 
         // Backing fields for List<T>
