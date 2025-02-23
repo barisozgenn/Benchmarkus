@@ -58,7 +58,7 @@ namespace ReflectionAOTAccessor
         /// <summary>
         /// Directly instantiates a Person using the new operator.
         /// </summary>
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public Person DirectInstantiation()
         {
             return new Person
@@ -101,7 +101,7 @@ namespace ReflectionAOTAccessor
         /// <summary>
         /// Directly gets the FirstName property from a Person instance.
         /// </summary>
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public string DirectPropertyGet()
         {
             return directPerson.FirstName;
@@ -123,7 +123,7 @@ namespace ReflectionAOTAccessor
         /// <summary>
         /// Directly sets the FirstName property on a Person instance.
         /// </summary>
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public void DirectPropertySet()
         {
             directPerson.FirstName = "UpdatedDirect";
