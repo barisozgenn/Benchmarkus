@@ -13,21 +13,21 @@
 
 ## Repository Structure
 
-| Folder/Project              | Description                                                                              |
-|-----------------------------|------------------------------------------------------------------------------------------|
-| **BaseRecordAbstractDtos**  | Benchmarks comparing record types, base classes, and abstract classes for data models.  |
-| **CollectionOperations**    | Various operations on collections (sorting, searching, filtering, etc.).               |
-| **Common**                  | Shared utilities, extensions, and helpers used across multiple benchmark projects.       |
-| **DataStructureOperations** | Benchmarks focusing on core data structures like lists, dictionaries, etc.              |
-| **DynamicClassGeneration**  | Reflection-based dynamic types and runtime code generation performance tests.            |
-| **GuardNullCheckerAttributes** | Null-check and guard-clause attribute experiments for safer, more robust code.      |
-| **JsonOperations**          | Benchmarks assessing JSON serialization and deserialization performance.                 |
-| **ListOperations**          | Performance comparisons using different List<T> manipulation strategies.                 |
-| **ModelMapping**            | Assessing overhead of various object-to-object mapping patterns (e.g., AutoMapper).      |
-| **ReflectionAOTAccessor**   | Exploring reflection, AOT scenarios, and advanced dynamic method calls.                 |
-| **SortingAlgorithms**       | Traditional sorting algorithms (e.g., QuickSort, MergeSort) compared head-to-head.       |
-| **StringOperations**        | String manipulation, concatenation, parsing, and related benchmarks.                     |
-| **UnmanagedTypesOperations**| Experiments with unmanaged memory, span usage, and low-level .NET performance.           |
+| Project                                                                                               | Description                                                                              |
+|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| **[BaseRecordAbstractDtos](https://github.com/barisozgenn/Benchmarkus/tree/main/BaseRecordAbstractDtos)**    | Benchmarks comparing record types, base classes, and abstract classes for data models.  |
+| **[CollectionOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/CollectionOperations)**        | Various operations on collections (sorting, searching, filtering, etc.).               |
+| **[Common](https://github.com/barisozgenn/Benchmarkus/tree/main/Common)**                                 | Shared utilities, extensions, and helpers used across multiple benchmark projects.       |
+| **[DataStructureOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/DataStructureOperations)**  | Benchmarks focusing on core data structures like lists, dictionaries, etc.              |
+| **[DynamicClassGeneration](https://github.com/barisozgenn/Benchmarkus/tree/main/DynamicClassGeneration)**    | Reflection-based dynamic types and runtime code generation performance tests.            |
+| **[GuardNullCheckerAttributes](https://github.com/barisozgenn/Benchmarkus/tree/main/GuardNullCheckerAttributes)** | Null-check and guard-clause attribute experiments for safer, more robust code.      |
+| **[JsonOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/JsonOperations)**                   | Benchmarks assessing JSON operations (System.Text vs Newtonsoft) performance.                 |
+| **[ListOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/ListOperations)**                   | Performance comparisons using different List<T> manipulation strategies.                 |
+| **[ModelMapping](https://github.com/barisozgenn/Benchmarkus/tree/main/ModelMapping)**                       | Assessing overhead of various object-to-object mapping patterns (e.g., AutoMapper).      |
+| **[ReflectionAOTAccessor](https://github.com/barisozgenn/Benchmarkus/tree/main/ReflectionAOTAccessor)**     | Exploring reflection, AOT scenarios, and advanced dynamic method calls.                 |
+| **[SortingAlgorithms](https://github.com/barisozgenn/Benchmarkus/tree/main/SortingAlgorithms)**             | Traditional sorting algorithms (e.g., QuickSort, MergeSort) compared head-to-head.       |
+| **[StringOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/StringOperations)**               | String manipulation, concatenation, parsing, and related benchmarks.                     |
+| **[UnmanagedTypesOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/UnmanagedTypesOperations)**| Experiments with unmanaged memory, span usage, and low-level .NET performance.           |
 
 ---
 ## What’s Inside
