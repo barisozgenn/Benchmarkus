@@ -23,7 +23,16 @@ This project is part of the **Benchmarkus** repository and focuses on benchmarki
 ## Benchmark Results (Placeholder)
 
 Below are example benchmark result tables for different .NET SDK versions. Update these tables with your actual results after running the benchmarks using `dotnet run --configuration Release`.
-
+### .NET SDK 10.0.100-preview.1.25120.13
+##### IterationCount=5, WarmupCount=3 
+| Method                  | Mean       | Error     | StdDev    | Median     | Rank | Gen0   | Allocated |
+|------------------------ |-----------:|----------:|----------:|-----------:|-----:|-------:|----------:|
+| DirectPropertySet       |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |    1 |      - |         - |
+| DirectPropertyGet       |  0.0123 ns | 0.0657 ns | 0.0171 ns |  0.0028 ns |    1 |      - |         - |
+| ReflectionPropertyGet   |  6.4817 ns | 0.0134 ns | 0.0021 ns |  6.4823 ns |    2 |      - |         - |
+| ReflectionPropertySet   | 11.0920 ns | 0.0626 ns | 0.0163 ns | 11.0826 ns |    3 |      - |         - |
+| ReflectionInstantiation | 71.3682 ns | 0.1861 ns | 0.0288 ns | 71.3690 ns |    4 | 0.0238 |     200 B |
+| DirectInstantiation     | 73.6860 ns | 0.4237 ns | 0.1100 ns | 73.6309 ns |    4 | 0.0277 |     232 B |
 ### .NET SDK 9.0.101
 ##### IterationCount=5, WarmupCount=3
 | Method                  | Mean       | Error     | StdDev    | Rank | Gen0   | Allocated |
