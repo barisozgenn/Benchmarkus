@@ -21,7 +21,6 @@
 | **[Common](https://github.com/barisozgenn/Benchmarkus/tree/main/Common)**                                 | Shared utilities, extensions, and helpers used across multiple benchmark projects.       |
 | **[DataStructureOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/DataStructureOperations)**  | Benchmarks focusing on core data structures like lists, dictionaries, etc.              |
 | **[DynamicClassGeneration](https://github.com/barisozgenn/Benchmarkus/tree/main/DynamicClassGeneration)**    | Reflection-based dynamic types and runtime code generation performance tests.            |
-| **[GuardNullCheckerAttributes](https://github.com/barisozgenn/Benchmarkus/tree/main/GuardNullCheckerAttributes)** | Null-check and guard-clause attribute experiments for safer, more robust code.      |
 | **[JsonOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/JsonOperations)**                   | Benchmarks assessing JSON operations (System.Text vs Newtonsoft) performance.                 |
 | **[ListOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/ListOperations)**                   | Performance comparisons using different List<T> manipulation strategies.                 |
 | **[ModelMapping](https://github.com/barisozgenn/Benchmarkus/tree/main/ModelMapping)**                       | Assessing overhead of various object-to-object mapping patterns (e.g., AutoMapper).      |
@@ -29,6 +28,26 @@
 | **[SortingAlgorithms](https://github.com/barisozgenn/Benchmarkus/tree/main/SortingAlgorithms)**             | Traditional sorting algorithms (e.g., QuickSort, MergeSort) compared head-to-head.       |
 | **[StringOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/StringOperations)**               | String manipulation, concatenation, parsing, and related benchmarks.                     |
 | **[UnmanagedTypesOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/UnmanagedTypesOperations)**| Experiments with unmanaged memory, span usage, and low-level .NET performance.           |
+
+## Upcoming Benchmark Areas & .NET 10 Enhancements
+
+| Project                                      | Description                                                                                                                                                                           |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[GuardNullCheckerAttributes](https://github.com/barisozgenn/Benchmarkus/tree/main/GuardNullCheckerAttributes)** | Null-check and guard-clause attribute experiments for safer, more robust code.      |
+| **[AsyncEnhancements](#)**                   | Investigate advanced asynchronous patterns and the latest async improvements introduced in .NET 10.                                                                                     |
+| **[MemoryOptimizedCollections](#)**          | Benchmark high-performance collections leveraging .NET 10's runtime optimizations and memory management improvements.                                                                 |
+| **[SourceGenerators](#)**                    | Evaluate the performance impact of source generators and code analysis enhancements, particularly as they mature in .NET 10.                                                                |
+| **[MinimalAPIsAdvanced](#)**                 | Compare the performance and scalability of .NET 10's new Minimal APIs against traditional approaches in web and microservices.                                                            |
+| **[CloudNativePatterns](#)**                 | Explore microservice and cloud-native design patterns, including enhancements in gRPC, HTTP/3, and container-optimized runtimes.                                                         |
+| **[LINQQueryPerformance](#)**                | Evaluate performance differences between declarative LINQ queries and imperative loops, including deferred execution and complex query compositions.                                   |
+| **[MemoryAndGCTuning](#)**                   | Analyze memory allocation patterns, compare different Garbage Collector (GC) modes (server vs. workstation), and benchmark high-performance types like Span<T> and Memory<T>.         |
+| **[SerializationDataTransfer](#)**           | Extend JSON benchmarks by exploring alternative serialization formats (e.g., Protobuf, MessagePack) and comparing custom serialization techniques with traditional approaches.     |
+| **[DynamicExpressionOperations](#)**         | Benchmark the construction and compilation of expression trees and dynamically generated lambda expressions versus their statically compiled counterparts.                         |
+| **[FrameworkAPIBenchmarks](#)**              | Analyze performance differences between data access strategies like EF Core, Dapper, and other micro-ORMs, along with benchmarking .NET Minimal APIs and microservice endpoints.    |
+| **[NewLanguageAndRuntime](#)**               | Benchmark advanced C# features (pattern matching, switch expressions) and assess .NET runtime improvements across versions, including JIT enhancements and hardware intrinsics.     |
+| **[RealWorldEndToEndScenarios](#)**          | Create benchmarks simulating realistic application workloads (e.g., web request handling, microservice orchestration, data processing pipelines) and evaluate cross-platform differences. |
+
+> **Note:** These projects are planned for future releases and will help expand **Benchmarkus** into a comprehensive performance exploration toolkit, keeping it aligned with the latest .NET 10 features and beyond.
 
 ---
 ## What’s Inside
