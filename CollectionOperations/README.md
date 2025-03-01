@@ -202,6 +202,38 @@ Below are the benchmark tables for different .NET SDK versions. Each table compa
 | Dictionary_Add_KeyValue_Int_String | 27,182.1 ns | 134.40 ns | 34.90 ns | 16.9373 | 138.92 KB |
 |          Dictionary_Remove_Key_Int | 27,431.4 ns | 310.15 ns | 48.00 ns | 16.9373 | 138.88 KB |
 
+#### .NET SDK 10.0.100-preview.1.25120.13
+| Method                             | Mean        | Error       | StdDev    | Gen0    | Gen1   | Allocated |
+|----------------------------------- |------------:|------------:|----------:|--------:|-------:|----------:|
+| Span_Remove_Int                    |    421.7 ns |     3.35 ns |   0.87 ns |  0.4807 |      - |   3.93 KB |
+| Span_Find_FirstEven                |    423.9 ns |     0.88 ns |   0.23 ns |  0.4807 |      - |   3.93 KB |
+| Array_Find_FirstEven               |    427.2 ns |     2.47 ns |   0.64 ns |  0.4807 |      - |   3.93 KB |
+| Array_Add_Int                      |    595.8 ns |     1.87 ns |   0.29 ns |  0.9623 |      - |   7.87 KB |
+| Array_Remove_Int                   |    596.3 ns |     2.96 ns |   0.77 ns |  0.9613 |      - |   7.86 KB |
+| Span_Add_Int                       |    603.1 ns |    17.58 ns |   4.57 ns |  0.9623 |      - |   7.87 KB |
+| ReadOnlyCollection_Add_Int         |  1,047.6 ns |     0.63 ns |   0.16 ns |  1.0052 | 0.0019 |   8.23 KB |
+| List_Remove_Int                    |  1,047.6 ns |     5.58 ns |   0.86 ns |  1.0052 | 0.0019 |   8.23 KB |
+| IList_Remove_Int                   |  1,049.8 ns |    20.18 ns |   3.12 ns |  1.0052 | 0.0019 |   8.23 KB |
+| List_Add_Int                       |  1,050.5 ns |     6.28 ns |   1.63 ns |  1.0052 | 0.0019 |   8.23 KB |
+| IList_Add_Int                      |  1,052.5 ns |     7.07 ns |   1.84 ns |  1.0052 | 0.0019 |   8.23 KB |
+| ReadOnlyCollection_Remove_Int      |  1,058.4 ns |     4.56 ns |   1.19 ns |  1.0052 | 0.0019 |   8.23 KB |
+| Enumerable_Find_FirstEven          |  1,059.9 ns |     1.71 ns |   0.44 ns |  1.0052 | 0.0019 |   8.23 KB |
+| List_Find_FirstEven                |  1,078.1 ns |    53.57 ns |   8.29 ns |  1.0052 | 0.0019 |   8.23 KB |
+| ReadOnlyCollection_Find_FirstEven  |  1,078.6 ns |     1.22 ns |   0.19 ns |  1.0147 | 0.0076 |   8.29 KB |
+| IList_Find_FirstEven               |  1,083.7 ns |    60.93 ns |  15.82 ns |  1.0052 | 0.0019 |   8.23 KB |
+| Enumerable_Add_Int                 |  1,280.6 ns |    67.28 ns |  17.47 ns |  1.5030 | 0.0019 |  12.28 KB |
+| HashSet_Remove_Int                 |  7,455.3 ns |    38.34 ns |   5.93 ns |  7.0038 | 0.2670 |  57.29 KB |
+| HashSet_Find_Int                   |  7,466.7 ns |    31.77 ns |   8.25 ns |  7.0038 | 0.2670 |  57.29 KB |
+| HashSet_Add_Int                    |  7,484.6 ns |   132.41 ns |  34.39 ns |  7.0038 | 0.2670 |  57.29 KB |
+| Enumerable_Remove_Int              |  8,008.9 ns |    66.34 ns |  10.27 ns |  2.0294 | 0.0305 |  16.65 KB |
+| LinkedList_Remove_Int              |  9,947.8 ns |    21.07 ns |   5.47 ns |  5.7373 | 0.8698 |  46.91 KB |
+| LinkedList_Add_Int                 |  9,986.9 ns |   114.07 ns |  29.62 ns |  5.7373 | 0.8545 |  46.96 KB |
+| LinkedList_Find_FirstEven          | 10,196.4 ns | 1,137.57 ns | 295.42 ns |  5.7373 | 0.8545 |  46.96 KB |
+| Dictionary_Find_Value_By_Key_Int   | 24,592.1 ns |   108.86 ns |  28.27 ns | 16.9373 | 2.8076 | 138.88 KB |
+| Dictionary_Remove_Key_Int          | 24,793.5 ns |    22.97 ns |   3.55 ns | 16.9373 | 2.8076 | 138.88 KB |
+| Dictionary_Add_KeyValue_Int_String | 24,878.0 ns |    98.01 ns |  25.45 ns | 16.9373 | 2.8076 | 138.92 KB |
+
+**IterationCount=5  WarmupCount=5**
 ---
   
 ### Big O Notation Complexity
