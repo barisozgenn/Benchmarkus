@@ -59,6 +59,23 @@ By measuring a range of common patterns—such as CPU-bound loops, list insertio
 
 Below are the consolidated results, including **Mean** (ns), **StdDev**, **Ratio**, **Rank**, **GC/Memory Allocations**, etc. For clarity, each .NET SDK version’s table is shown.
 
+### .NET SDK 10.0.100-preview.1.25120.13
+
+| Method                              | Mean         | Error         | StdDev       | Ratio    | RatioSD | Rank | Gen0   | Gen1   | Allocated | Alloc Ratio |
+|------------------------------------ |-------------:|--------------:|-------------:|---------:|--------:|-----:|-------:|-------:|----------:|------------:|
+| CpuBoundSync                        |     50.30 ns |      1.043 ns |     0.161 ns |     0.97 |    0.00 |    1 |      - |      - |         - |          NA |
+| SumPersonIdsSync                    |     51.88 ns |      0.116 ns |     0.030 ns |     1.00 |    0.00 |    1 |      - |      - |         - |          NA |
+| ProcessPeopleAsync                  |    224.53 ns |      4.669 ns |     0.722 ns |     4.33 |    0.01 |    2 |      - |      - |         - |          NA |
+| CpuBoundAsync                       |    762.84 ns |     15.986 ns |     4.152 ns |    14.70 |    0.07 |    3 | 0.0324 |      - |     272 B |          NA |
+| LockTest                            |    779.09 ns |      2.759 ns |     0.716 ns |    15.02 |    0.01 |    3 |      - |      - |         - |          NA |
+| LockMixedOperations                 |  1,367.74 ns |      5.080 ns |     1.319 ns |    26.36 |    0.03 |    4 | 0.1144 | 0.0019 |     959 B |          NA |
+| ReaderWriterLockSlimMixedOperations |  2,052.11 ns |      2.357 ns |     0.612 ns |    39.55 |    0.02 |    5 | 0.1144 |      - |     958 B |          NA |
+| SumPersonIdsParallelFor             |  2,099.28 ns |    437.947 ns |   113.733 ns |    40.46 |    2.00 |    5 | 0.2975 |      - |    2503 B |          NA |
+| SemaphoreTest                       |  2,361.98 ns |      3.890 ns |     1.010 ns |    45.53 |    0.03 |    5 |      - |      - |         - |          NA |
+| SumPersonIdsPlinq                   | 12,112.59 ns |    764.660 ns |   198.580 ns |   233.47 |    3.50 |    6 | 0.6638 |      - |    5560 B |          NA |
+| ProcessPeopleSync                   | 16,726.93 ns |    356.767 ns |    92.651 ns |   322.41 |    1.64 |    7 |      - |      - |         - |          NA |
+| MutexTest                           | 23,125.01 ns |     69.710 ns |    10.788 ns |   445.74 |    0.30 |    8 |      - |      - |         - |          NA |
+| ConcurrentDictionaryInsert          | 65,917.92 ns | 12,965.550 ns | 2,006.433 ns | 1,270.58 |   34.37 |    9 | 3.5400 | 0.1221 |   27629 B |          NA |
 ### .NET SDK 9.0.101
 
 | Method                              | Mean         | Error         | StdDev       | Ratio    | RatioSD | Rank | Completed Work Items | Lock Contentions | Gen0   | Gen1   | Allocated | Alloc Ratio |
