@@ -38,6 +38,12 @@ Modern .NET applications often require dynamic behavior—ranging from generatin
 
 Below are the benchmark results for different .NET versions, using `IterationCount=20` and `WarmupCount=5`.
 
+#### .NET SDK 10.0.100-preview.1.25120.13
+| Method           | Mean       | Error     | StdDev    | Gen0   | Allocated |
+|----------------- |-----------:|----------:|----------:|-------:|----------:|
+| DelegateInvoke   |  0.7127 ns | 0.0009 ns | 0.0009 ns |      - |         - |
+| ReflectionInvoke | 40.7732 ns | 0.2225 ns | 0.2562 ns | 0.0134 |     112 B |
+
 #### .NET SDK 9.0.101
 
 | **Method**             | **Mean**          | **Error**        | **StdDev**       | **Median**         | **Gen0**  | **Gen1**  | **Gen2** | **Allocated** |
