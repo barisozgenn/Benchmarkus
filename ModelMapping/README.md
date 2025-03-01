@@ -76,9 +76,11 @@ Below are the benchmark results for **AutoMapper** vs. **Manual Mapping** across
 | ManualMapping        |  8.894 ms   | 0.0306 ms   | 0.0286 ms   |  0.22     |  875.0000   |  515.6250 | 125.0000 |     6.87 MB    |           0.28   |
 | AutoMapperMapping    | 40.664 ms   | 0.4353 ms   | 0.4071 ms   |  1.00     | 3333.3333   | 1833.3333 | 416.6667 |    24.41 MB    |           1.00   |
 
-##### .NET SDK 10.0.0
-
-*(Will be added when .NET 10 is available.)*
+##### .NET SDK 10.0.100-preview.1.25120.13
+| Method            | Mean     | Error    | StdDev   | Ratio | Gen0      | Gen1      | Gen2     | Allocated | Alloc Ratio |
+|------------------ |---------:|---------:|---------:|------:|----------:|----------:|---------:|----------:|------------:|
+| ManualMapping     | 14.75 ms | 0.077 ms | 0.068 ms |  0.32 | 1250.0000 |  531.2500 | 125.0000 |   9.92 MB |        0.36 |
+| AutoMapperMapping | 45.63 ms | 0.169 ms | 0.158 ms |  1.00 | 3727.2727 | 2090.9091 | 454.5455 |  27.47 MB |        1.00 |
 
 ---
 
