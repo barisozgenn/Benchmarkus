@@ -116,6 +116,26 @@ Below are **example** tables for different .NET versions. Update these tables wi
 | StringReplaceBenchmark              |  25,250.623 ns |   113.7135 ns |  29.5310 ns | 191.35 |    1.41 |    8 |  28.5645 | 28.5645 | 28.5645 |   90053 B |      450.26 |
 | SplitString                         |  77,053.460 ns |   591.1775 ns |  91.4854 ns | 583.91 |    4.34 |    9 |  42.9688 | 10.7422 |       - |  360032 B |    1,800.16 |
 | ManyConcatenations                  | 125,517.283 ns | 1,309.1108 ns | 339.9719 ns | 951.16 |    7.34 |   10 | 339.3555 |       - |       - | 2840456 B |   14,202.28 |
+### .NET SDK 10.0.100-preview.1.25120.13
+##### IterationCount=5  WarmupCount=3
+| Method                              | Mean           | Error       | StdDev     | Ratio    | RatioSD | Rank | Gen0     | Gen1    | Gen2    | Allocated | Alloc Ratio |
+|------------------------------------ |---------------:|------------:|-----------:|---------:|--------:|-----:|---------:|--------:|--------:|----------:|------------:|
+| StringContains                      |       7.175 ns |   0.0084 ns |  0.0013 ns |     0.06 |    0.00 |    1 |        - |       - |       - |         - |        0.00 |
+| SubstringExtraction                 |      11.155 ns |   1.3219 ns |  0.2046 ns |     0.09 |    0.00 |    2 |   0.0268 |       - |       - |     224 B |        1.12 |
+| RangeExtraction                     |      11.160 ns |   0.1857 ns |  0.0482 ns |     0.09 |    0.00 |    2 |   0.0268 |       - |       - |     224 B |        1.12 |
+| StringTrimBenchmark                 |      21.603 ns |   0.6026 ns |  0.1565 ns |     0.17 |    0.00 |    3 |   0.0134 |       - |       - |     112 B |        0.56 |
+| StringIndexOf                       |      26.523 ns |   0.0405 ns |  0.0063 ns |     0.21 |    0.00 |    3 |        - |       - |       - |         - |        0.00 |
+| JoinStrings                         |      34.882 ns |   0.1655 ns |  0.0256 ns |     0.28 |    0.00 |    4 |   0.0153 |       - |       - |     128 B |        0.64 |
+| ConcatWithPlus                      |     125.284 ns |   4.5074 ns |  0.6975 ns |     1.00 |    0.01 |    5 |   0.0238 |       - |       - |     200 B |        1.00 |
+| ConcatWithInterpolation             |     139.542 ns |   2.1419 ns |  0.3315 ns |     1.11 |    0.01 |    5 |   0.0248 |       - |       - |     208 B |        1.04 |
+| ConcatWithStringConcat              |     140.654 ns |   3.5798 ns |  0.9296 ns |     1.12 |    0.01 |    5 |   0.0238 |       - |       - |     200 B |        1.00 |
+| ConcatWithStringBuilder             |     158.137 ns |   2.2946 ns |  0.5959 ns |     1.26 |    0.01 |    5 |   0.0525 |       - |       - |     440 B |        2.20 |
+| ManyConcatenationsWithStringBuilder |   3,418.972 ns | 176.9926 ns | 45.9644 ns |    27.29 |    0.36 |    6 |   1.7586 |  0.0153 |       - |   14712 B |       73.56 |
+| StringToUpperBenchmark              |   9,456.216 ns |  41.9924 ns |  6.4984 ns |    75.48 |    0.38 |    7 |  28.5645 | 28.5645 | 28.5645 |   90043 B |      450.21 |
+| StringReplaceBenchmark              |  25,294.098 ns | 467.3835 ns | 72.3281 ns |   201.90 |    1.13 |    8 |  28.5645 | 28.5645 | 28.5645 |   90053 B |      450.26 |
+| SplitString                         |  77,755.150 ns | 181.9267 ns | 47.2458 ns |   620.65 |    3.09 |    9 |  42.9688 | 10.7422 |       - |  360032 B |    1,800.16 |
+| ManyConcatenations                  | 128,989.863 ns | 268.7170 ns | 69.7850 ns | 1,029.61 |    5.12 |   10 | 339.3555 |  1.7090 |       - | 2840456 B |   14,202.28 |
+
 ---
 
 ### Observations & Analysis
