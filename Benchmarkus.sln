@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionAOTAccessor", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseRecordAbstractDtos", "BaseRecordAbstractDtos\BaseRecordAbstractDtos.csproj", "{D603DE38-435C-4DC8-8586-85B36CBA3C7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSyncTPL", "AsyncSyncTPL\AsyncSyncTPL.csproj", "{488A7DE3-21CA-4972-A04C-4583B0270DCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D603DE38-435C-4DC8-8586-85B36CBA3C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D603DE38-435C-4DC8-8586-85B36CBA3C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D603DE38-435C-4DC8-8586-85B36CBA3C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{488A7DE3-21CA-4972-A04C-4583B0270DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{488A7DE3-21CA-4972-A04C-4583B0270DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{488A7DE3-21CA-4972-A04C-4583B0270DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{488A7DE3-21CA-4972-A04C-4583B0270DCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
