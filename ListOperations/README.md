@@ -221,6 +221,49 @@ Below are **example** tables for different .NET versions. Update these tables wi
 | IList_Find_FirstPersonByEmail            | 50   | 509.001 ns |  5.4625 ns | 0.8453 ns |    8 | 0.2060 |      - |    1728 B |
 | List_Find_FirstPersonByEmail             | 50   | 509.572 ns |  2.9684 ns | 0.4594 ns |    8 | 0.2060 |      - |    1728 B |
 
+### .NET 10.0.100-preview.1.25120.13
+##### IterationCount=5  WarmupCount=1
+| Method                                   | Size | Mean       | Error      | StdDev    | Rank | Gen0   | Gen1   | Allocated |
+|----------------------------------------- |----- |-----------:|-----------:|----------:|-----:|-------:|-------:|----------:|
+| IList_Find_FirstEven                     | 50   |   2.054 ns |  0.0099 ns | 0.0026 ns |    1 |      - |      - |         - |
+| List_Find_FirstEven                      | 50   |   2.058 ns |  0.0203 ns | 0.0053 ns |    1 |      - |      - |         - |
+| List_AsReadOnly_Person                   | 50   |   4.490 ns |  0.0213 ns | 0.0055 ns |    2 | 0.0029 |      - |      24 B |
+| List_ToArray_Int                         | 50   |  12.973 ns |  0.2103 ns | 0.0546 ns |    3 | 0.0268 |      - |     224 B |
+| IList_ToArray_Int                        | 50   |  14.907 ns |  0.1289 ns | 0.0335 ns |    3 | 0.0268 |      - |     224 B |
+| List_Clear_Int                           | 50   |  18.203 ns |  0.1796 ns | 0.0278 ns |    3 | 0.0306 |      - |     256 B |
+| List_Remove_LastInt                      | 50   |  18.380 ns |  0.3024 ns | 0.0468 ns |    3 | 0.0306 |      - |     256 B |
+| IList_Clear_Int                          | 50   |  19.013 ns |  0.6592 ns | 0.1712 ns |    3 | 0.0306 |      - |     256 B |
+| IList_Remove_LastInt                     | 50   |  19.373 ns |  1.2755 ns | 0.3312 ns |    3 | 0.0306 |      - |     256 B |
+| List_Enumerate_Foreach_Int               | 50   |  20.494 ns |  0.5978 ns | 0.1553 ns |    3 |      - |      - |         - |
+| List_Enumerate_ForLoop_String            | 50   |  24.733 ns |  0.2124 ns | 0.0329 ns |    3 |      - |      - |         - |
+| List_ToArray_String                      | 50   |  26.782 ns |  1.3705 ns | 0.3559 ns |    3 | 0.0507 |      - |     424 B |
+| IList_ToArray_String                     | 50   |  28.800 ns |  0.2322 ns | 0.0359 ns |    3 | 0.0507 |      - |     424 B |
+| List_Remove_LastPerson                   | 50   |  34.502 ns |  0.1121 ns | 0.0291 ns |    3 | 0.0545 |      - |     456 B |
+| IList_Remove_LastPerson                  | 50   |  34.804 ns |  0.1269 ns | 0.0330 ns |    3 | 0.0545 |      - |     456 B |
+| IList_Remove_LastString                  | 50   |  34.856 ns |  0.4912 ns | 0.0760 ns |    3 | 0.0545 |      - |     456 B |
+| List_Remove_LastString                   | 50   |  36.053 ns |  0.3269 ns | 0.0506 ns |    3 | 0.0545 |      - |     456 B |
+| List_Insert_First_Int                    | 50   |  38.582 ns |  0.3273 ns | 0.0506 ns |    3 | 0.0812 |      - |     680 B |
+| IList_Insert_First_Int                   | 50   |  38.641 ns |  0.1778 ns | 0.0275 ns |    3 | 0.0812 |      - |     680 B |
+| IList_AsReadOnly_Person                  | 50   |  39.171 ns |  0.1265 ns | 0.0196 ns |    3 | 0.0573 | 0.0001 |     480 B |
+| IList_Add_Int                            | 50   |  40.130 ns |  0.0529 ns | 0.0082 ns |    3 | 0.0812 |      - |     680 B |
+| List_Add_Int                             | 50   |  40.355 ns |  0.1489 ns | 0.0230 ns |    3 | 0.0812 |      - |     680 B |
+| IList_Enumerate_ForLoop_String           | 50   |  42.735 ns |  0.4545 ns | 0.0703 ns |    3 |      - |      - |         - |
+| IList_RemoveAll_GreaterThanThreshold_Int | 50   |  52.357 ns |  0.4333 ns | 0.0671 ns |    3 | 0.0306 |      - |     256 B |
+| List_RemoveAll_GreaterThanThreshold_Int  | 50   |  57.873 ns |  0.2958 ns | 0.0458 ns |    3 | 0.0381 |      - |     320 B |
+| List_Insert_First_String                 | 50   |  71.262 ns |  0.8185 ns | 0.2126 ns |    3 | 0.1529 |      - |    1280 B |
+| IList_Insert_First_String                | 50   |  71.711 ns |  2.5324 ns | 0.6577 ns |    3 | 0.1529 |      - |    1280 B |
+| List_Add_String                          | 50   |  92.547 ns |  0.4830 ns | 0.1254 ns |    4 | 0.1577 | 0.0002 |    1320 B |
+| IList_Add_String                         | 50   |  93.084 ns |  1.2645 ns | 0.1957 ns |    4 | 0.1577 | 0.0002 |    1320 B |
+| IList_Enumerate_Foreach_Int              | 50   |  95.069 ns |  0.0855 ns | 0.0132 ns |    4 | 0.0048 |      - |      40 B |
+| List_Enumerate_LINQ_Foreach_Person       | 50   | 161.870 ns |  6.2233 ns | 1.6162 ns |    5 | 0.0086 |      - |      72 B |
+| IList_Enumerate_LINQ_Foreach_Person      | 50   | 168.536 ns |  1.0674 ns | 0.2772 ns |    5 | 0.0086 |      - |      72 B |
+| List_Add_Person                          | 50   | 190.303 ns |  9.7360 ns | 2.5284 ns |    5 | 0.1836 | 0.0007 |    1536 B |
+| IList_Add_Person                         | 50   | 207.233 ns | 13.1609 ns | 3.4179 ns |    5 | 0.1836 | 0.0007 |    1536 B |
+| List_Find_FirstAString                   | 50   | 376.347 ns |  1.2921 ns | 0.2000 ns |    6 |      - |      - |         - |
+| IList_Find_FirstAString                  | 50   | 376.475 ns |  1.0958 ns | 0.1696 ns |    6 |      - |      - |         - |
+| IList_Find_FirstPersonByEmail            | 50   | 508.340 ns |  1.1490 ns | 0.1778 ns |    7 | 0.2060 |      - |    1728 B |
+| List_Find_FirstPersonByEmail             | 50   | 509.675 ns |  0.7755 ns | 0.2014 ns |    7 | 0.2060 |      - |    1728 B |
+
 ---
 
 ### Observations & Analysis
