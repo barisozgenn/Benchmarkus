@@ -147,6 +147,24 @@ Below are the benchmark tables for different .NET SDK versions. Each table compa
 | HashTable_Find_String    | 58.63 us |  9.270 us |  1.435 us | 0.1221 |    1360 B |
 | Queue_Add_String         | 60.33 us | 72.221 us | 11.176 us |      - |    3490 B |
 
+#### .NET SDK 10.0.100-preview.1.25120.13
+
+**IterationCount=5  WarmupCount=5**
+| Method                   | Mean     | Error     | StdDev   | Gen0   | Gen1   | Allocated |
+|------------------------- |---------:|----------:|---------:|-------:|-------:|----------:|
+| Stack_Get_Person         | 36.84 us |  2.495 us | 0.648 us |      - |      - |     368 B |
+| Array_Get_Int            | 37.20 us |  2.581 us | 0.670 us | 0.0610 |      - |     640 B |
+| Array_Add_Int            | 38.08 us |  1.325 us | 0.344 us | 0.0610 |      - |     640 B |
+| Stack_Add_Person         | 38.09 us |  2.461 us | 0.639 us | 0.0610 |      - |    2768 B |
+| Stack_Remove_Int         | 39.18 us |  2.728 us | 0.709 us |      - |      - |     256 B |
+| Queue_Get_String         | 40.46 us |  5.795 us | 1.505 us |      - |      - |     376 B |
+| Queue_Add_String         | 41.85 us |  4.822 us | 0.746 us | 0.1221 | 0.0610 |    3248 B |
+| Queue_Remove_Person      | 42.38 us | 22.717 us | 5.900 us |      - |      - |     378 B |
+| HashTable_Find_Int       | 54.76 us | 28.881 us | 4.469 us |      - |      - |     803 B |
+| HashTable_Find_Person    | 58.26 us |  6.678 us | 1.734 us | 0.0610 |      - |     960 B |
+| HashTable_Find_String    | 59.25 us |  9.066 us | 2.354 us | 0.1221 |      - |    1360 B |
+| LinkedList_Remove_String | 65.99 us | 57.281 us | 8.864 us |      - |      - |     569 B |
+
 ---
 
 ### Big O Notation Complexity
