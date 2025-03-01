@@ -35,8 +35,31 @@ The benchmarks measure operations such as **instantiation, property access, and 
 
 ---
 
-## 🔥 Benchmark Results
+## 🔥 Benchmark Results  
+### .NET SDK 10.0.100-preview.1.25120.13
+###### Host: .NET 10.0.0 (10.0.25.8005), Arm64 RyuJIT AdvSIMD
+##### IterationCount=5, WarmupCount=3
 
+| Method                       | Mean       | Error     | StdDev    | Rank | Gen0   | Allocated |
+|----------------------------- |-----------:|----------:|----------:|-----:|-------:|----------:|
+| GetFirstName_BaseClass       |  0.0000 ns | 0.0000 ns | 0.0000 ns |    1 |      - |         - |
+| GetFirstName_Record          |  0.0000 ns | 0.0000 ns | 0.0000 ns |    1 |      - |         - |
+| SetFirstName_BaseClass       |  0.0000 ns | 0.0000 ns | 0.0000 ns |    1 |      - |         - |
+| SetFirstName_BaseAbstract    |  0.0000 ns | 0.0000 ns | 0.0000 ns |    1 |      - |         - |
+| GetFirstName_BaseAbstract    |  0.0009 ns | 0.0040 ns | 0.0010 ns |    2 |      - |         - |
+| ListWrite_BaseClass          |  0.1551 ns | 0.0010 ns | 0.0002 ns |    3 |      - |         - |
+| ListWrite_BaseAbstract       |  0.1561 ns | 0.0031 ns | 0.0008 ns |    3 |      - |         - |
+| ListRead_BaseClass           |  7.3422 ns | 0.0098 ns | 0.0015 ns |    4 |      - |         - |
+| ListRead_BaseAbstract        |  8.1629 ns | 0.0282 ns | 0.0044 ns |    4 |      - |         - |
+| ListFindFirst_BaseClass      |  8.2470 ns | 0.0360 ns | 0.0093 ns |    4 |      - |         - |
+| ListFindFirst_Record         |  8.2507 ns | 0.0188 ns | 0.0029 ns |    4 |      - |         - |
+| ListFindFirst_BaseAbstract   |  8.3110 ns | 0.3919 ns | 0.1018 ns |    4 |      - |         - |
+| ListRead_Record              |  8.3446 ns | 0.0425 ns | 0.0110 ns |    4 |      - |         - |
+| SetFirstName_Record          |  9.4923 ns | 1.3298 ns | 0.3453 ns |    4 | 0.0076 |      64 B |
+| ListWrite_Record             | 10.4835 ns | 0.0555 ns | 0.0144 ns |    4 | 0.0076 |      64 B |
+| DirectInstantiation_Abstract | 88.0028 ns | 0.8825 ns | 0.1366 ns |    5 | 0.0076 |      64 B |
+| DirectInstantiation          | 88.1841 ns | 0.2997 ns | 0.0464 ns |    5 | 0.0076 |      64 B |
+| DirectInstantiation_Record   | 88.5183 ns | 1.3990 ns | 0.3633 ns |    5 | 0.0076 |      64 B |
 ### .NET SDK 9.0.101
 ###### Host: .NET 9.0.0 (9.0.24.52809), Arm64 RyuJIT AdvSIMD
 ##### IterationCount=5, WarmupCount=3
