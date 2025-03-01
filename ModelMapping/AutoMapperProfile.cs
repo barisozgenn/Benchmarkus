@@ -1,4 +1,5 @@
 using AutoMapper;
+using Common.Models;
 
 namespace ModelMapping;
     /// <summary>
