@@ -12,7 +12,7 @@ This project benchmarks JSON **serialization** and **deserialization** for **sin
 
 - **Relative Speed**: Which library is generally faster for single-object vs. list-based scenarios?
 - **Allocation Patterns**: Whether large payloads trigger higher Gen0/Gen1/Gen2 collections in one library vs. the other.
-- **Runtime Behavior**: How performance changes under .NET 9.0.101 with ARM64 RyuJIT and hardware acceleration (AdvSIMD).
+- **Runtime Behavior**: How performance changes under .NET 10.0.100-preview.1.25120.13 with ARM64 RyuJIT and hardware acceleration (AdvSIMD).
 
 ---
 ## Benchmark Results
