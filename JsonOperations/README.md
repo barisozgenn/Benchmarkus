@@ -26,6 +26,38 @@ Below are the results for **System.Text.Json** and **Newtonsoft.Json** across di
 > **Mean**: Average execution time per operation  
 > **Gen0/Gen1/Gen2**: Number of Garbage Collections on respective generations  
 > **Allocated**: Total bytes allocated during the operation
+#### .NET SDK 10.0.100-preview.1.25120.13
+
+| Method                                      | Size | Mean           | Error        | StdDev      | Gen0     | Gen1     | Gen2     | Allocated |
+|-------------------------------------------- |----- |---------------:|-------------:|------------:|---------:|---------:|---------:|----------:|
+| SystemTextJson_Serialize_Single             | 1000 |       467.1 ns |      1.55 ns |     1.38 ns |   0.1011 |        - |        - |     848 B |
+| SystemTextJson_Serialize_Single             | 10   |       474.4 ns |      0.45 ns |     0.38 ns |   0.1011 |        - |        - |     848 B |
+| SystemTextJson_CreateJson_Single            | 10   |       684.1 ns |      0.67 ns |     0.60 ns |   0.7811 |   0.0105 |        - |    6536 B |
+| Newtonsoft_Serialize_Single                 | 10   |       816.3 ns |      2.00 ns |     1.67 ns |   0.2518 |        - |        - |    2112 B |
+| Newtonsoft_Serialize_Single                 | 1000 |       820.2 ns |      1.21 ns |     1.01 ns |   0.2518 |        - |        - |    2112 B |
+| SystemTextJson_CreateJson_Single            | 1000 |       834.6 ns |      6.86 ns |     6.08 ns |   0.7811 |   0.0105 |        - |    6536 B |
+| Newtonsoft_CreateJson_Single                | 1000 |       887.7 ns |      0.96 ns |     0.85 ns |   0.2861 |        - |        - |    2400 B |
+| Newtonsoft_CreateJson_Single                | 10   |       890.0 ns |      0.59 ns |     0.52 ns |   0.2861 |   0.0010 |        - |    2400 B |
+| SystemTextJson_Deserialize_Single           | 10   |     1,283.6 ns |      5.31 ns |     4.71 ns |   0.2327 |        - |        - |    1952 B |
+| SystemTextJson_Serialize_Deserialize_Single | 10   |     1,286.3 ns |      1.28 ns |     1.07 ns |   0.2327 |        - |        - |    1952 B |
+| SystemTextJson_Deserialize_Single           | 1000 |     1,305.8 ns |     17.64 ns |    16.50 ns |   0.2327 |        - |        - |    1952 B |
+| SystemTextJson_Serialize_Deserialize_Single | 1000 |     1,567.3 ns |      5.66 ns |     4.73 ns |   0.2327 |        - |        - |    1952 B |
+| SystemTextJson_ReadJson_Single              | 10   |     1,761.9 ns |      1.53 ns |     1.36 ns |   0.2651 |        - |        - |    2232 B |
+| SystemTextJson_ReadJson_Single              | 1000 |     2,094.5 ns |     13.38 ns |    11.87 ns |   0.2632 |        - |        - |    2232 B |
+| Newtonsoft_Serialize_Deserialize_Single     | 10   |     2,279.7 ns |      6.29 ns |     5.57 ns |   0.6561 |   0.0038 |        - |    5496 B |
+| Newtonsoft_ReadJson_Single                  | 1000 |     2,281.4 ns |      4.65 ns |     4.12 ns |   0.6561 |   0.0038 |        - |    5496 B |
+| Newtonsoft_Deserialize_Single               | 1000 |     2,298.7 ns |     18.32 ns |    17.13 ns |   0.6561 |   0.0038 |        - |    5496 B |
+| Newtonsoft_Deserialize_Single               | 10   |     2,298.8 ns |      6.20 ns |     5.18 ns |   0.6561 |   0.0038 |        - |    5496 B |
+| Newtonsoft_ReadJson_Single                  | 10   |     2,347.9 ns |      6.23 ns |     5.52 ns |   0.6561 |   0.0038 |        - |    5496 B |
+| Newtonsoft_Serialize_Deserialize_Single     | 1000 |     2,656.3 ns |     14.18 ns |    12.57 ns |   0.6561 |   0.0038 |        - |    5496 B |
+| SystemTextJson_Serialize_List               | 10   |     4,930.5 ns |     72.80 ns |    80.91 ns |   0.6790 |        - |        - |    5728 B |
+| Newtonsoft_Serialize_List                   | 10   |     8,631.1 ns |      7.87 ns |     7.36 ns |   1.9379 |   0.0458 |        - |   16224 B |
+| SystemTextJson_Deserialize_List             | 10   |    13,649.3 ns |     12.97 ns |    10.12 ns |   1.5259 |   0.0153 |        - |   12800 B |
+| Newtonsoft_Deserialize_List                 | 10   |    22,931.5 ns |     17.67 ns |    16.53 ns |   3.1128 |   0.0916 |        - |   26200 B |
+| SystemTextJson_Serialize_List               | 1000 |   594,680.4 ns | 10,580.67 ns | 9,897.17 ns | 141.6016 | 141.6016 | 141.6016 |  580795 B |
+| Newtonsoft_Serialize_List                   | 1000 |   958,584.5 ns |  5,377.63 ns | 5,030.24 ns | 166.0156 | 166.0156 | 166.0156 | 1311632 B |
+| SystemTextJson_Deserialize_List             | 1000 | 1,765,651.7 ns |  9,514.10 ns | 8,899.50 ns | 220.7031 | 173.8281 | 140.6250 | 1260928 B |
+| Newtonsoft_Deserialize_List                 | 1000 | 2,446,654.8 ns |  3,774.69 ns | 3,152.04 ns | 218.7500 | 164.0625 | 164.0625 | 2082393 B |
 
 #### .NET SDK 9.0.101
 
