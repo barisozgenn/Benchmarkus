@@ -53,7 +53,6 @@ Below are **placeholder tables** for different .NET SDK versions. After you run 
 
 #### .NET SDK 9.0.101
 
-
 | Method                        | Mean          | Error      | StdDev     | Gen0    | Allocated |
 |------------------------------ |--------------:|-----------:|-----------:|--------:|----------:|
 | AllocateIntArrayOnce          |   104.6096 ns |  0.4812 ns |  0.4265 ns |  0.4809 |    4024 B |
@@ -67,11 +66,25 @@ Below are **placeholder tables** for different .NET SDK versions. After you run 
 | AllocateDecimalArrayInLoop    |    28.4777 ns |  0.0128 ns |  0.0107 ns |       - |         - |
 | AllocateUnmanagedStructInLoop |    28.9098 ns |  0.0815 ns |  0.0636 ns |       - |         - |
 
+#### .NET SDK 10.0.100-preview.1.25120.13
+| Method                        | Mean          | Error      | StdDev     | Gen0    | Allocated |
+|------------------------------ |--------------:|-----------:|-----------:|--------:|----------:|
+| AllocateIntArrayOnce          |   108.9848 ns |  0.4025 ns |  0.3361 ns |  0.4809 |    4024 B |
+| AllocateStringOnce            |    87.9557 ns |  0.2290 ns |  0.2142 ns |  0.2419 |    2024 B |
+| AllocateBoolArrayOnce         |    28.6966 ns |  0.0533 ns |  0.0472 ns |  0.1224 |    1024 B |
+| AllocateDecimalArrayOnce      |   390.2744 ns |  1.5995 ns |  1.3356 ns |  1.9116 |   16024 B |
+| AllocateUnmanagedStructOnce   |     0.0966 ns |  0.0005 ns |  0.0004 ns |       - |         - |
+| AllocateIntArrayInLoop        |    29.8347 ns |  0.1957 ns |  0.1735 ns |       - |         - |
+| AllocateStringInLoop          | 8,861.3348 ns | 12.4772 ns | 10.4190 ns | 24.1852 |  202400 B |
+| AllocateBoolArrayInLoop       |    29.5720 ns |  0.2216 ns |  0.2073 ns |       - |         - |
+| AllocateDecimalArrayInLoop    |    28.9547 ns |  0.2693 ns |  0.2519 ns |       - |         - |
+| AllocateUnmanagedStructInLoop |    29.3977 ns |  0.1892 ns |  0.1770 ns |       - |         - |
+
 ---
 
 ### Conclusion
 
-This **BenchmarkDotNet** project offers valuable insights into **memory allocations** for arrays, strings, decimals, booleans, and unmanaged generic structs in .NET. By running these benchmarks under different .NET versions (6, 7, 8, 9), you can observe:
+This **BenchmarkDotNet** project offers valuable insights into **memory allocations** for arrays, strings, decimals, booleans, and unmanaged generic structs in .NET. By running these benchmarks under different .NET versions (6, 7, 8, 9, 10), you can observe:
 
 - **Allocation Overhead**: How large or repetitive allocations can impact total memory usage and trigger garbage collections.  
 - **Type Efficiency**: The relative memory costs for different data types in single vs. repeated allocation scenarios.  
