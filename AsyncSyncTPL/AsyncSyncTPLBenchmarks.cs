@@ -6,7 +6,7 @@ using System.Collections.Concurrent;
 namespace Benchmarkus.AsyncSyncTPL
 {
     [MemoryDiagnoser]
-    [ThreadingDiagnoser]  // If you're on Windows, you could also consider: [ThreadingDiagnoser(ThreadingDiagnoserOptions.All)]
+    //[ThreadingDiagnoser]  // If you're on Windows, you could also consider: [ThreadingDiagnoser(ThreadingDiagnoserOptions.All)]
     [Orderer(SummaryOrderPolicy.FastestToSlowest)] // Sorts results from fastest to slowest
     [RankColumn] // Adds a 'Rank' column in the results table
     [SimpleJob(warmupCount:3, iterationCount:5)] // Configures the job
