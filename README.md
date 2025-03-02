@@ -23,6 +23,7 @@
 | **[DynamicClassGeneration](https://github.com/barisozgenn/Benchmarkus/tree/main/DynamicClassGeneration)**    | Reflection-based dynamic types and runtime code generation performance tests.            |
 | **[GuardNullCheckerAttributes](https://github.com/barisozgenn/Benchmarkus/tree/main/GuardNullCheckerAttributes)** | Null-check and guard-clause attribute experiments for safer, more robust code.      |
 | **[JsonOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/JsonOperations)**                   | Benchmarks assessing JSON operations (System.Text vs Newtonsoft) performance.                 |
+| **[LINQsQueryApproaches](https://github.com/barisozgenn/Benchmarkus/tree/main/LINQsQueryApproaches)**       | LINQ, PLINQ, SpanLinq, StructLinq, imperative loops comparisons.                         |
 | **[ListOperations](https://github.com/barisozgenn/Benchmarkus/tree/main/ListOperations)**                   | Performance comparisons using different List<T> manipulation strategies.                 |
 | **[ModelMapping](https://github.com/barisozgenn/Benchmarkus/tree/main/ModelMapping)**                       | Assessing overhead of various object-to-object mapping patterns (e.g., AutoMapper).      |
 | **[ReflectionAOTAccessor](https://github.com/barisozgenn/Benchmarkus/tree/main/ReflectionAOTAccessor)**     | Exploring reflection, AOT scenarios, and advanced dynamic method calls.                 |
@@ -39,7 +40,6 @@
 | **[SourceGenerators](#)**                    | Evaluate the performance impact of source generators and code analysis enhancements, particularly as they mature in .NET 10.                                                                |
 | **[MinimalAPIsAdvanced](#)**                 | Compare the performance and scalability of .NET 10's new Minimal APIs against traditional approaches in web and microservices.                                                            |
 | **[CloudNativePatterns](#)**                 | Explore microservice and cloud-native design patterns, including enhancements in gRPC, HTTP/3, and container-optimized runtimes.                                                         |
-| **[LINQQueryPerformance](#)**                | Evaluate performance differences between declarative LINQ queries and imperative loops, including deferred execution and complex query compositions.                                   |
 | **[MemoryAndGCTuning](#)**                   | Analyze memory allocation patterns, compare different Garbage Collector (GC) modes (server vs. workstation), and benchmark high-performance types like Span<T> and Memory<T>.         |
 | **[SerializationDataTransfer](#)**           | Extend JSON benchmarks by exploring alternative serialization formats (e.g., Protobuf, MessagePack) and comparing custom serialization techniques with traditional approaches.     |
 | **[DynamicExpressionOperations](#)**         | Benchmark the construction and compilation of expression trees and dynamically generated lambda expressions versus their statically compiled counterparts.                         |
